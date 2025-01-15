@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<style>
+.work-container {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 20px;
+}
+
+.work-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.work-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.work-meta {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.work-content {
+    margin-bottom: 60px;
+}
+
+.work-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.work-description {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+</style>
+
+<article class="work-container">
+    <header class="work-header">
+        <h1 class="work-title">{{ page.title }}</h1>
+        <div class="work-meta">
+            {% if page.client %}<span>客户：{{ page.client }}</span>{% endif %}
+            {% if page.date %}<span>日期：{{ page.date | date: "%Y-%m" }}</span>{% endif %}
+        </div>
+    </header>
+
+    <div class="work-content">
+        {% if page.featured_image %}
+        <img class="work-image" src="{{ page.featured_image }}" alt="{{ page.title }}">
+        {% endif %}
+
+        <div class="work-description">
+            {{ content }}
+        </div>
+
+        {% if page.gallery %}
+        <div class="work-gallery">
+            {% for image in page.gallery %}
+            <div class="gallery-item">
+                <img src="{{ image.url }}" alt="{{ image.caption }}">
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</article> 

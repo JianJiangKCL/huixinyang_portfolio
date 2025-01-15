@@ -1,1 +1,28 @@
-theme: minima
+title: 杨慧鑫的作品集
+description: 广告艺术指导 | 视觉创意
+baseurl: "/huixinyang_portfolio"
+url: ""
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 作品集设置
+collections:
+  works:
+    output: true
+    permalink: /works/:path/
+
+# 导航菜单
+navigation:
+  - title: 首页
+    url: /
+  - title: 作品集
+    url: /works/
+  - title: 关于我
+    url: /about/
+
+# 社交媒体链接
+social:
+  email: 1458630149@qq.com
+  phone: 15800440416

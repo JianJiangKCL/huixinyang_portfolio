@@ -1,0 +1,154 @@
+---
+layout: default
+title: 作品集
+permalink: /works/
+---
+
+<style>
+.works-container {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 20px;
+}
+
+.works-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.works-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.works-description {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.work-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+}
+
+.work-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.work-card-content {
+    padding: 20px;
+    background: white;
+}
+
+.work-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.work-card-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.work-card-description {
+    margin-top: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    border: none;
+    background: #f8f9fa;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: #007bff;
+    color: white;
+}
+</style>
+
+<div class="works-container">
+    <header class="works-header">
+        <h1 class="works-title">作品集</h1>
+        <p class="works-description">展示我的广告创意作品，包括品牌视觉设计、广告摄影等项目。</p>
+    </header>
+
+    <div class="category-filter">
+        <button class="filter-button active">全部</button>
+        <button class="filter-button">品牌设计</button>
+        <button class="filter-button">广告摄影</button>
+        <button class="filter-button">视觉创意</button>
+    </div>
+
+    <div class="works-grid">
+        {% for work in site.works %}
+        <a href="{{ work.url | relative_url }}" class="work-card">
+            {% if work.featured_image %}
+            <img src="{{ work.featured_image }}" alt="{{ work.title }}">
+            {% endif %}
+            <div class="work-card-content">
+                <h2 class="work-card-title">{{ work.title }}</h2>
+                <div class="work-card-meta">
+                    {% if work.client %}
+                    <span>{{ work.client }}</span>
+                    {% endif %}
+                    {% if work.date %}
+                    <span>{{ work.date | date: "%Y-%m" }}</span>
+                    {% endif %}
+                </div>
+                {% if work.excerpt %}
+                <div class="work-card-description">
+                    {{ work.excerpt | truncate: 100 }}
+                </div>
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Here you would typically filter the works based on category
+            // For now, we'll just show all works
+        });
+    });
+});
+</script> 
