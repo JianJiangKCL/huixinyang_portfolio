@@ -3,13 +3,13 @@ layout: work
 title: 来伊份年货项目
 client: 来伊份
 date: 2024-01-16
-featured_image: /huixinyang_portfolio/images/works/laiyifen-new-year/featured.jpg
+featured_image: /images/works/laiyifen-new-year/featured.jpg
 gallery:
-  - url: /huixinyang_portfolio/images/works/laiyifen-new-year/gallery1.jpg
+  - url: /images/works/laiyifen-new-year/gallery1.jpg
     caption: 蛇年主题设计
-  - url: /huixinyang_portfolio/images/works/laiyifen-new-year/gallery2.jpg
+  - url: /images/works/laiyifen-new-year/gallery2.jpg
     caption: 现代与传统元素融合
-  - url: /huixinyang_portfolio/images/works/laiyifen-new-year/gallery3.jpg
+  - url: /images/works/laiyifen-new-year/gallery3.jpg
     caption: 整体视觉呈现
 
 ---

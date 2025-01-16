@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 作品集
-permalink: /
+permalink: /works/
 ---
 
 <style>
@@ -112,7 +112,7 @@ permalink: /
         {% for work in site.works %}
         <a href="{{ work.url | relative_url }}" class="work-card">
             {% if work.featured_image %}
-            <img src="{{ work.featured_image }}" alt="{{ work.title }}">
+            <img src="{{ work.featured_image | relative_url }}" alt="{{ work.title }}">
             {% endif %}
             <div class="work-card-content">
                 <h2 class="work-card-title">{{ work.title }}</h2>

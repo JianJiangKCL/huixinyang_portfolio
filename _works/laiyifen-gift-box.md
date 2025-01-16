@@ -3,13 +3,13 @@ layout: work
 title: 来伊份新年礼盒
 client: 来伊份
 date: 2024-01-16
-featured_image: /huixinyang_portfolio/images/works/laiyifen-gift-box/featured.jpg
+featured_image: /images/works/laiyifen-gift-box/featured.jpg
 gallery:
-  - url: /huixinyang_portfolio/images/works/laiyifen-gift-box/gallery1.jpg
+  - url: /images/works/laiyifen-gift-box/gallery1.jpg
     caption: 新年礼盒设计展示
-  - url: /huixinyang_portfolio/images/works/laiyifen-gift-box/gallery2.jpg
+  - url: /images/works/laiyifen-gift-box/gallery2.jpg
     caption: 礼盒包装细节
-  - url: /huixinyang_portfolio/images/works/laiyifen-gift-box/gallery3.jpg
+  - url: /images/works/laiyifen-gift-box/gallery3.jpg
     caption: 整体视觉效果
 
 ---
