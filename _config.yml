@@ -15,10 +15,8 @@ collections:
 
 # 导航菜单
 navigation:
-  - title: 首页
-    url: /
   - title: 作品集
-    url: /works/
+    url: /
   - title: 关于我
     url: /about/
 
