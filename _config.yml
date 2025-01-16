@@ -1,8 +1,24 @@
 title: 杨慧鑫的作品集
 description: 广告艺术指导 | 视觉创意
-baseurl: "/huixinyang_portfolio"
+baseurl: ""
 url: ""
 markdown: kramdown
+
+# 资源路径设置
+sass:
+  style: compressed
+  
+# 静态文件设置
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      image: true
+  - scope:
+      path: "images"
+    values:
+      image: true
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -11,7 +27,7 @@ plugins:
 collections:
   works:
     output: true
-    permalink: /:path/
+    permalink: /:collection/:name/
 
 # 导航菜单
 navigation:
