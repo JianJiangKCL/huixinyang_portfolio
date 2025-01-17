@@ -29,6 +29,8 @@ collections:
     output: true
     permalink: /:collection/:name/
 
+excerpt_separator: "##"
+
 # 导航菜单
 navigation:
   - title: 首页
