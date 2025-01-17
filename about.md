@@ -33,7 +33,7 @@ permalink: /about/
 <div class="about-container">
     <div class="about-section">
         <h1>关于我</h1>
-        <p>我是杨慧鑫，一位拥有三年经验的广告艺术指导。在这个充满创意和挑战的领域中，我始终保持着对艺术的热情和对完美的追求。</p>
+        <p>我是杨慧鑫，一位拥有四年经验的资深广告艺术指导。在这个充满创意和挑战的领域中，我始终保持着对艺术的热情和对完美的追求。</p>
     </div>
 
     <div class="about-section">
@@ -50,7 +50,7 @@ permalink: /about/
 
     <div class="about-section">
         <h2>工作经验</h2>
-        <p>在过去的三年里，我有幸为众多知名品牌提供服务，包括：</p>
+        <p>在过去的几年里，我有幸为众多知名品牌提供服务，包括：</p>
         <ul>
             <li>奢侈品牌：雅诗兰黛、Rémy Martin、歌帝梵</li>
             <li>科技品牌：小米、vivo、科大讯飞</li>
