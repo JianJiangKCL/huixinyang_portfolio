@@ -76,7 +76,7 @@ layout: default
 
     <div class="work-content">
         {% if page.featured_image %}
-        <img class="work-image" src="{{ page.featured_image }}" alt="{{ page.title }}">
+        <img class="work-image" src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
         {% endif %}
 
         <div class="work-description">
@@ -87,7 +87,7 @@ layout: default
         <div class="work-gallery">
             {% for image in page.gallery %}
             <div class="gallery-item">
-                <img src="{{ image.url }}" alt="{{ image.caption }}">
+                <img src="{{ image.url | relative_url }}" alt="{{ image.caption }}">
             </div>
             {% endfor %}
         </div>
