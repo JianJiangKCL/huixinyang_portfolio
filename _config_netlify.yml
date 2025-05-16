@@ -1,0 +1,5 @@
+# Netlify-specific configuration that overrides _config.yml
+# This file is only used when deploying to Netlify
+
+# Empty baseurl for Netlify (deployed at root)
+baseurl: "" 
