@@ -98,6 +98,74 @@ permalink: /about/
     object-fit: contain;
 }
 
+.logo-scroll-container {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.logo-scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+}
+
+.logo-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    height: 60px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    max-height: 100%;
+    max-width: 120px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.logo-scroll-container::before,
+.logo-scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.logo-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 @media (min-width: 768px) {
     .brands-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -168,42 +236,64 @@ permalink: /about/
             </div>
         </div>
         
-        <h3>合作品牌墙</h3>
-        <div class="logo-wall">
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Rémy Martin.png" alt="Rémy Martin"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/小天才.png" alt="小天才"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/良品铺子.jpeg" alt="良品铺子"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/天猫.png" alt="天猫"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/卡士.png" alt="卡士"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/徐福记.png" alt="徐福记"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/vivo.jpeg" alt="vivo"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/歌帝梵.png" alt="歌帝梵"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/乐芝牛.png" alt="乐芝牛"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/元气森林.png" alt="元气森林"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/罗森.png" alt="罗森"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/星巴克.png" alt="星巴克"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/来伊份.png" alt="来伊份"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/霸王茶姬.png" alt="霸王茶姬"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Rio.png" alt="Rio"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/科大讯飞.png" alt="科大讯飞"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/美团.png" alt="美团"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/悸动烧仙草.png" alt="悸动烧仙草"></div>
-            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Kiri.jpeg" alt="Kiri"></div>
+        <div class="logo-scroll-container">
+            <div class="logo-scroll-track">
+                <!-- First set of logos -->
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Rémy Martin.png" alt="Rémy Martin"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小天才.png" alt="小天才"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/良品铺子.jpeg" alt="良品铺子"></div>
+                
+                <!-- Duplicate set for continuous scrolling -->
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/天猫.png" alt="天猫"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/卡士.png" alt="卡士"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/徐福记.png" alt="徐福记"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/vivo.jpeg" alt="vivo"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/歌帝梵.png" alt="歌帝梵"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/乐芝牛.png" alt="乐芝牛"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/元气森林.png" alt="元气森林"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/罗森.png" alt="罗森"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/星巴克.png" alt="星巴克"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/来伊份.png" alt="来伊份"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/霸王茶姬.png" alt="霸王茶姬"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Rio.png" alt="Rio"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/科大讯飞.png" alt="科大讯飞"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/美团.png" alt="美团"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/悸动烧仙草.png" alt="悸动烧仙草"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Kiri.jpeg" alt="Kiri"></div>
+                
+                <!-- First set repeated to ensure continuous scrolling -->
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Rémy Martin.png" alt="Rémy Martin"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱"></div>
+            </div>
         </div>
     </div>
 
