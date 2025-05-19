@@ -68,6 +68,36 @@ permalink: /about/
     color: #495057;
 }
 
+.logo-wall {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.logo-container {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1;
+}
+
+.logo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 @media (min-width: 768px) {
     .brands-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -78,7 +108,7 @@ permalink: /about/
 <div class="about-container">
     <div class="about-section">
         <h1>关于我</h1>
-        <p>我是杨慧鑫，一位拥有四年经验的资深广告艺术指导。在这个充满创意和挑战的领域中，我始终保持着对艺术的热情和对完美的追求。</p>
+        <p>我是杨慧鑫，一位拥有四年经验的资深广告创意总监。在这个充满创意和挑战的领域中，我始终保持着对艺术的热情和对完美的追求。</p>
     </div>
 
     <div class="about-section">
@@ -97,7 +127,7 @@ permalink: /about/
         <h2>工作经验</h2>
         
         <div class="work-experience">
-            <h3>FOODOGRAPHY — 资深艺术指导</h3>
+            <h3>FOODOGRAPHY — 创意总监 </h3>
             <p class="work-period">2021.10 - 2025.1</p>
             
             <h4>工作职责：</h4>
@@ -136,6 +166,44 @@ permalink: /about/
                 <h5>零售与电商</h5>
                 <p>天猫 | 盒马鲜生 | 美团 | 罗森 | 满小饱 | 小熊电器</p>
             </div>
+        </div>
+        
+        <h3>合作品牌墙</h3>
+        <div class="logo-wall">
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Rémy Martin.png" alt="Rémy Martin"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/小天才.png" alt="小天才"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/良品铺子.jpeg" alt="良品铺子"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/天猫.png" alt="天猫"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/卡士.png" alt="卡士"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/徐福记.png" alt="徐福记"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/vivo.jpeg" alt="vivo"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/歌帝梵.png" alt="歌帝梵"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/乐芝牛.png" alt="乐芝牛"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/元气森林.png" alt="元气森林"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/罗森.png" alt="罗森"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/星巴克.png" alt="星巴克"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/来伊份.png" alt="来伊份"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/霸王茶姬.png" alt="霸王茶姬"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Rio.png" alt="Rio"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/科大讯飞.png" alt="科大讯飞"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/美团.png" alt="美团"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/悸动烧仙草.png" alt="悸动烧仙草"></div>
+            <div class="logo-container"><img src="{{ site.baseurl }}/images/brands/Kiri.jpeg" alt="Kiri"></div>
         </div>
     </div>
 
