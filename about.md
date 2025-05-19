@@ -132,6 +132,15 @@ permalink: /about/
     transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
+/* 添加图片加载错误时的后备样式 */
+.logo-item img.error {
+    display: none;
+}
+
+.logo-item img:not([src=""]):not([src="null"]):not([src="undefined"]) {
+    display: block;
+}
+
 .logo-item:hover img {
     filter: grayscale(0%);
     opacity: 1;
@@ -239,60 +248,60 @@ permalink: /about/
         <div class="logo-scroll-container">
             <div class="logo-scroll-track">
                 <!-- First set of logos -->
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Rémy Martin.png" alt="Rémy Martin"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小天才.png" alt="小天才"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/良品铺子.jpeg" alt="良品铺子"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Remy%20Martin.png" alt="Rémy Martin" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小天才.png" alt="小天才" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/良品铺子.jpeg" alt="良品铺子" onerror="this.classList.add('error')"></div>
                 
                 <!-- Duplicate set for continuous scrolling -->
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/天猫.png" alt="天猫"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/卡士.png" alt="卡士"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/徐福记.png" alt="徐福记"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/vivo.jpeg" alt="vivo"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/歌帝梵.png" alt="歌帝梵"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/乐芝牛.png" alt="乐芝牛"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/元气森林.png" alt="元气森林"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/罗森.png" alt="罗森"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/星巴克.png" alt="星巴克"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/来伊份.png" alt="来伊份"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/霸王茶姬.png" alt="霸王茶姬"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Rio.png" alt="Rio"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/科大讯飞.png" alt="科大讯飞"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/美团.png" alt="美团"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/悸动烧仙草.png" alt="悸动烧仙草"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Kiri.jpeg" alt="Kiri"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/天猫.png" alt="天猫" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/卡士.png" alt="卡士" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/徐福记.png" alt="徐福记" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/vivo.jpeg" alt="vivo" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/歌帝梵.png" alt="歌帝梵" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/乐芝牛.png" alt="乐芝牛" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/元气森林.png" alt="元气森林" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/罗森.png" alt="罗森" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/星巴克.png" alt="星巴克" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/来伊份.png" alt="来伊份" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/霸王茶姬.png" alt="霸王茶姬" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Rio.png" alt="Rio" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/科大讯飞.png" alt="科大讯飞" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/美团.png" alt="美团" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/悸动烧仙草.png" alt="悸动烧仙草" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Kiri.jpeg" alt="Kiri" onerror="this.classList.add('error')"></div>
                 
                 <!-- First set repeated to ensure continuous scrolling -->
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Rémy Martin.png" alt="Rémy Martin"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Remy%20Martin.png" alt="Rémy Martin" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/泡泡骚.jpeg" alt="泡泡骚" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/盒马鲜生.png" alt="盒马鲜生" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/裕莲茶楼.jpeg" alt="裕莲茶楼" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/必胜客.png" alt="必胜客" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/麦当劳.png" alt="麦当劳" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/KFC.png" alt="KFC" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小熊电器.png" alt="小熊电器" onerror="this.classList.add('error')"></div>
+                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/满小饱.png" alt="满小饱" onerror="this.classList.add('error')"></div>
             </div>
         </div>
     </div>
