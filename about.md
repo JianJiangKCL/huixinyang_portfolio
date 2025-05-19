@@ -121,6 +121,9 @@ permalink: /about/
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .logo-item img {
@@ -137,6 +140,7 @@ permalink: /about/
     display: none;
 }
 
+/* 调整图片加载处理方法 */
 .logo-item img:not([src=""]):not([src="null"]):not([src="undefined"]) {
     display: block;
 }
@@ -249,10 +253,8 @@ permalink: /about/
             <div class="logo-scroll-track">
                 <!-- First set of logos -->
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛" onerror="this.classList.add('error')"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事" onerror="this.classList.add('error')"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Remy%20Martin.png" alt="Rémy Martin" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify" onerror="this.classList.add('error')"></div>
@@ -287,10 +289,8 @@ permalink: /about/
                 
                 <!-- First set repeated to ensure continuous scrolling -->
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/雅诗兰黛.png" alt="雅诗兰黛" onerror="this.classList.add('error')"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/汤臣倍健.jpeg" alt="汤臣倍健" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/小米.png" alt="小米" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/百事.png" alt="百事" onerror="this.classList.add('error')"></div>
-                <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Remy%20Martin.png" alt="Rémy Martin" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/伊利.png" alt="伊利" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/蒙牛.png" alt="蒙牛" onerror="this.classList.add('error')"></div>
                 <div class="logo-item"><img src="{{ site.baseurl }}/images/brands/Casetify.png" alt="Casetify" onerror="this.classList.add('error')"></div>
