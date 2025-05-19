@@ -29,6 +29,62 @@ permalink: /about/
     text-align: center;
 }
 
+/* 新增的技能卡片样式 */
+.skill-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.skill-card h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #343a40;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.skill-card h4:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 40px;
+    height: 3px;
+    background: #007bff;
+    border-radius: 3px;
+}
+
+.skill-card p {
+    margin: 0;
+    color: #495057;
+    line-height: 1.6;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .work-experience {
     margin-bottom: 30px;
     border-left: 3px solid #007bff;
@@ -194,13 +250,23 @@ permalink: /about/
 
     <div class="about-section">
         <h2>专业技能</h2>
-        <div class="skills-list">
-            <div class="skill-item">视觉策划</div>
-            <div class="skill-item">艺术指导</div>
-            <div class="skill-item">品牌视觉构建</div>
-            <div class="skill-item">创意团队管理</div>
-            <div class="skill-item">跨部门协作</div>
-            <div class="skill-item">设计软件应用</div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>视觉设计</h4>
+                <p>擅长插画、字体设计、美术执行等一专多能，具备自己独特优势视觉表现力</p>
+            </div>
+            <div class="skill-card">
+                <h4>品牌策划</h4>
+                <p>能够从品牌定位、受众分析到视觉呈现进行全流程策划，打造一致性品牌形象</p>
+            </div>
+            <div class="skill-card">
+                <h4>设计软件</h4>
+                <p>精通Photoshop和AI/ID等设计软件，擅长多媒体广告与品牌视觉识别系统开发</p>
+            </div>
+            <div class="skill-card">
+                <h4>AIGC</h4>
+                <p>熟练运用AIGC工具（Lovart、星流、Midjourney）辅助KV创意构思与拍摄构图</p>
+            </div>
         </div>
     </div>
 
