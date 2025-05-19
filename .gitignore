@@ -56,6 +56,7 @@ _site/
 /test/tmp/
 /test/version_tmp/
 /tmp/
+/to_add/
 
 # Bundler #
 ###########
