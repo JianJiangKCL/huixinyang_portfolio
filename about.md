@@ -28,6 +28,51 @@ permalink: /about/
     border-radius: 8px;
     text-align: center;
 }
+
+.work-experience {
+    margin-bottom: 30px;
+    border-left: 3px solid #007bff;
+    padding-left: 20px;
+}
+
+.work-period {
+    color: #6c757d;
+    margin-top: 0;
+    font-style: italic;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.brand-category {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.brand-category h5 {
+    margin-top: 0;
+    color: #343a40;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.brand-category p {
+    line-height: 1.6;
+    margin: 8px 0;
+    color: #495057;
+}
+
+@media (min-width: 768px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 </style>
 
 <div class="about-container">
@@ -50,14 +95,48 @@ permalink: /about/
 
     <div class="about-section">
         <h2>工作经验</h2>
-        <p>在过去的几年里，我有幸为众多知名品牌提供服务，包括：</p>
-        <ul>
-            <li>奢侈品牌：雅诗兰黛、Rémy Martin、歌帝梵</li>
-            <li>科技品牌：小米、vivo、科大讯飞</li>
-            <li>食品饮料：百事、康师傅、元气森林</li>
-            <li>餐饮品牌：必胜客、麦当劳、KFC</li>
-            <li>零售品牌：天猫、盒马鲜生、良品铺子</li>
-        </ul>
+        
+        <div class="work-experience">
+            <h3>FOODOGRAPHY — 资深艺术指导</h3>
+            <p class="work-period">2021.10 - 2025.1</p>
+            
+            <h4>工作职责：</h4>
+            <ul>
+                <li>主导品牌视觉策划：制定拍摄方案，确保作品契合品牌调性与市场定位</li>
+                <li>统筹现场创意执行：包括场景搭建、道具选配、模特与食品造型指导</li>
+                <li>全案把控摄影流程：协调跨部门资源，把控拍摄质量与进度</li>
+                <li>驱动项目高效交付：把控质量标准，实现品牌内容的精准上线</li>
+            </ul>
+        </div>
+
+        <h4>合作品牌：</h4>
+        <div class="brands-grid">
+            <div class="brand-category">
+                <h5>奢侈与生活品牌</h5>
+                <p>雅诗兰黛 | Rémy Martin | 歌帝梵 | 半岛酒店 | Casetify | 泡泡骚</p>
+            </div>
+            
+            <div class="brand-category">
+                <h5>科技品牌</h5>
+                <p>小米 | vivo | 科大讯飞 | 小天才</p>
+            </div>
+            
+            <div class="brand-category">
+                <h5>食品饮料</h5>
+                <p>百事 | 康师傅 | 元气森林 | 伊利 | 蒙牛 | 悸动烧仙草 | 三只松鼠 | 良品铺子</p>
+                <p>卡士 | 徐福记 | 乐芝牛 | 加州巴旦木 | 来伊份 | Rio | 菌小宝</p>
+            </div>
+            
+            <div class="brand-category">
+                <h5>餐饮品牌</h5>
+                <p>必胜客 | 麦当劳 | KFC | 永和大王 | 裕莲茶楼 | 霸王茶姬 | wonderwall | 拉面说</p>
+            </div>
+            
+            <div class="brand-category">
+                <h5>零售与电商</h5>
+                <p>天猫 | 盒马鲜生 | 美团 | 罗森 | 满小饱 | 小熊电器</p>
+            </div>
+        </div>
     </div>
 
     <div class="about-section">
